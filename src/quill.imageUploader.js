@@ -1,3 +1,4 @@
+import Quill from 'quill';
 import "./blots/image";
 
 import './quill.imageUploader.css';
@@ -62,7 +63,7 @@ class ImageUploader {
         this.quill.deleteText(range.index, 2);
         // Insert the server saved image
         this.quill.insertEmbed(range.index, "image", `${url}`);
-        
+
         range.index++;
         this.quill.setSelection(range, 'api');
     }
